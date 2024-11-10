@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Employee Details Changed</title>
+    </h:head>
+    <h:body>
+           <header>
+            <h1></h1>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <h:form>
+                                <h:commandLink value="User ID: #{userManagedBean.id}" action="#{userManagedBean.displayDetails()}"/>           
+                            </h:form>
+                        </li>
+                        <li>
+                            <h:form>
+                                <h:commandLink value="Logout" action="#{myLoginManagedBean.logoutResult()}"/>           
+                            </h:form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <nav id="pageNav">
+                <a href="/ED-BookingSystem-war/faces/afterLogin/homePage.xhtml">Home Page</a>
+                <a href="/ED-BookingSystem-war/faces/afterLogin/aboutUs.xhtml">About Us</a>
+                <a class="active" href="/BOOKMOVIETICKET-war/faces/admin/manage.xhtml">Manage Web Site</a>
+            </nav>
+        </header>
+        
+        <article>
+            <h2>Create new admin</h2>
+      
+         <section>
+                <h3>Adding new admin succeed</h3>
+          </section>
+
+        </article>
+        
+    
+    </h:body>
+</html>

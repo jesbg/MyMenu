@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Edit Menu</title>
+    </h:head>
+    <h:body>
+
+        <h2>Edit menu details</h2>
+        
+        <section>
+                <h:form>
+                    <h:inputHidden value="#{menuManagedBean.id}"/>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h:outputLabel value="Menu Name:"/>
+                                </td>
+                                <td>
+                                    <h:inputText title="Name" id="name"
+                                                 maxlength="25"
+                                                 required="true" 
+                                                 style="color: black;"
+                                                 requiredMessage="Name must not be blank"
+                                                 value="#{menuManagedBean.name}"/>
+                                </td>
+                                <td>
+                                    <h:message for="name" style="color:red"/>
+                                </td>
+                            </tr>
+                     
+                            <tr>
+                                <td>
+                                    <h:outputLabel value="Description: "/>
+                                </td>
+                                <td>
+                                    <h:inputTextarea title="id" id="description"
+                                                     rows="5" cols="22"
+                                                     required="true" 
+                                                     style="color: black;"
+                                                     requiredMessage="Name must not be blank"
+                                                     value="#{menuManagedBean.description}"/>
+                                </td>                 
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h:outputLabel value="Image File: "/>
+                                </td>
+                                <td>
+                                    <h:inputText title="imgfile" maxlength="30" 
+                                                 required="false"
+                                                 style="color: black;"
+                                                 value="#{menuManagedBean.imgfile}"/>
+                                </td>                 
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <h:outputLabel value="Price: "/>
+                                </td>
+                                <td>
+                                    <h:inputText title="price"
+                                                 required="false"
+                                                 style="color: black;"
+                                                 value="#{menuManagedBean.price}"/>
+                                </td>                 
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p></p>
+
+                    <h:commandButton id="submit" value="Submit" style="color: black;"
+                                     action="#{menuManagedBean.editDetails()}"/>
+
+                </h:form>
+            </section>
+    </h:body>
+</html>
+
+
+

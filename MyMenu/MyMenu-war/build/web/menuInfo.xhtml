@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Jessica's Restaurant - Login Page</title>
+    </h:head>
+
+    
+    <h:body>
+    <h1>
+        Jessica's Restaurant
+    </h1>
+        
+        <article class="body">
+            <h2 align="center">
+                MENU DETAILS
+            </h2>
+         
+            <section class="info">
+                <h1><h:outputText value="#{menuManagedBean.name}" /></h1>
+                <h:graphicImage class="menuImg" width="289.5" height="424.5" library="images" name = "#{menuManagedBean.imgfile}"/>
+                <div>
+
+                    <p id="menuDescription"><strong>Description: </strong><h:outputText value="#{menuManagedBean.description}" /></p>
+                    <p><strong>Price: </strong><h:outputText value="#{menuManagedBean.price}" /></p>
+
+                </div>
+                <button onclick="location.href = '/afterLogin/homePage.xhtml'" style="color: black" type="button">
+                    Add to cart
+                </button>
+            </section>
+        </article>
+       
+    </h:body>
+</html>
+

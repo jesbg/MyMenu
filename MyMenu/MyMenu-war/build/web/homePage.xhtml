@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      <h:head>
+        <title>Jessica's Restaurant - Login Page</title>
+    </h:head>
+
+    
+    <h:body>
+    <h1>
+        Jessica's Restaurant
+    </h1>
+        
+        
+        <article class="body">
+
+            <h2 align="center">
+                    MENU
+            </h2>
+            <div class="menu">
+                <h:form >
+                    #{menuManagedBean.MenuList()}
+                    <ui:repeat value="#{menuManagedBean.menuList}" var="movie">
+                        <h:commandLink action="#{menuManagedBean.displayMenu()}">
+                            <f:actionListener binding="#{menuManagedBean.setId(menu.id)}" />
+                            <h:graphicImage class="menuImg"  width="193" height="283"  library="images" name = "#{menu.imgfile}" />
+                             <p><h:outputText value="#{menuManagedBean.price}" /></p>
+                        </h:commandLink>
+                    </ui:repeat>
+                </h:form>
+            </div>
+
+
+        </article>
+      
+    </h:body>
+</html>
+
+
+
+                   <!-- <h:commandLink action="#{movieManagedBean.displayMovieInfo()}">
+                        <f:actionListener binding="#{movieManagedBean.setId(1)}" />
+                        <h:graphicImage class="movieImg"  width="193" height="283"  library="images" name = "1.jpg" />
+                    </h:commandLink>
+
+                    <h:commandLink action="#{movieManagedBean.displayMovieInfo()}">
+                        <f:actionListener binding="#{movieManagedBean.setId(2)}" />
+                        <h:graphicImage class="movieImg"  width="193" height="283"  library="images" name = "2.jpg" />
+                    </h:commandLink>
+
+                    <h:commandLink action="#{movieManagedBean.displayMovieInfo()}">
+                        <f:actionListener binding="#{movieManagedBean.setId(3)}" />
+                        <h:graphicImage class="movieImg"  width="193" height="283"  library="images" name = "3.jpg" />
+                    </h:commandLink>
+
+                    <h:commandLink action="#{movieManagedBean.displayMovieInfo()}">
+                        <f:actionListener binding="#{movieManagedBean.setId(4)}" />
+                        <h:graphicImage class="movieImg"  width="193" height="283"  library="images" name = "4.jpg" />
+                    </h:commandLink>
+
+                    <h:commandLink action="#{movieManagedBean.displayMovieInfo()}">
+                        <f:actionListener binding="#{movieManagedBean.setId(5)}" />
+                        <h:graphicImage class="movieImg"  width="193" height="283"  library="images" name = "5.jpg" />
+                    </h:commandLink>
+
+                    <h:commandLink action="#{movieManagedBean.displayMovieInfo()}">
+                        <f:actionListener binding="#{movieManagedBean.setId(6)}" />
+                        <h:graphicImage class="movieImg"  width="193" height="283"  library="images" name = "6.jpg" />
+                    </h:commandLink>-->
+
+<!--      <h:outputLink value="faces/movieInfo.xhtml" >
+
+          <h:graphicImage class="movieImg" width="193" height="283"  library="images" name = "6.jpg"/>
+
+      </h:outputLink>
+
+      <h:outputLink value="faces/movieInfo.xhtml" >
+
+          <h:graphicImage class="movieImg" width="193" height="283" library="images" name = "3.jpg"/>
+
+      </h:outputLink>
+
+      <h:outputLink value="faces/movieInfo.xhtml" >
+
+          <h:graphicImage class="movieImg" width="193" height="283" library="images" name = "4.jpg"/>
+
+      </h:outputLink>
+
+      <h:outputLink value="faces/movieInfo.xhtml" >
+
+          <h:graphicImage class="movieImg"  width="193" height="283" library="images" name = "5.jpg"/>
+
+      </h:outputLink>
+
+      <h:outputLink value="faces/movieInfo.xhtml" >
+
+          <h:graphicImage class="movieImg" width="193" height="283" library="images" name = "6.jpg"/>
+
+      </h:outputLink>-->
